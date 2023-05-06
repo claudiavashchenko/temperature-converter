@@ -1,7 +1,14 @@
+* {
+    font-family: Lato, arial, sans-serif;
+}
 body {
     background-color: rgb(32, 33, 36);
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 .app-container {
     padding: 20px;
