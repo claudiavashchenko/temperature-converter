@@ -19,8 +19,19 @@ function update(e) {
 }
 
 function calculate(firstTempUnit, secondTempUnit, temp) {
+    const conbination = firstTempUnit + "-" + secondTempUnit
+    let result
 
-    return 100
+    switch(conbination) {
+        case "fahrenheit-celcius":
+            result = (Number(temp) - 32) * 5/9
+            break
+        case "celcius-fahrenheit":
+            result = (Number(temp) * 9/5) + 32
+            break
+    }
+
+    return result.toFixed(2)
 }
 
 primaryInput.addEventListener("change", update)
