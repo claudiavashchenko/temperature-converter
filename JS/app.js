@@ -12,7 +12,7 @@ function update(e) {
        secondaryInput.value = 10
     }
     if(elementId === "secondary-input") {
-        primaryInput.value = calculate()
+        primaryInput.value = calculate(secondarySelect.value, primarySelect.value, secondaryInput.value)
     } else {
         secondaryInput.value = calculate(primarySelect.value, secondarySelect.value, primaryInput.value)
     }
@@ -20,6 +20,11 @@ function update(e) {
 
 function calculate(firstTempUnit, secondTempUnit, temp) {
     const conbination = firstTempUnit + "-" + secondTempUnit
+
+    if(firstTempUnit === secondTempUnit) {
+        return temp
+    }
+
     let result
 
     switch(conbination) {
