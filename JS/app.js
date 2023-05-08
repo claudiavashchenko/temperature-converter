@@ -29,6 +29,18 @@ function calculate(firstTempUnit, secondTempUnit, temp) {
         case "celcius-fahrenheit":
             result = (Number(temp) * 9/5) + 32
             break
+        case "kelvin-fahrenheit":
+            result = (Number(temp) - 273.15) * 9/5 + 32
+            break
+        case "kelvin-celcius":
+            result = Number(temp) - 273.15
+            break
+        case "fahrenheit-kelvin":
+            result = (Number(temp) - 32) * 5/9 + 273.15
+            break
+        case "celcius-kelvin":
+            result = Number(temp) + 273.15
+            break
     }
 
     return result.toFixed(2)
